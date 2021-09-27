@@ -301,14 +301,12 @@ Route::group(['middleware' => ['auth', 'verified', 'xss', 'checkUserStatus']], f
         Route::get('doctors', 'DoctorController@index')->name('doctors.index')->middleware('modules');
         Route::post('doctors', 'DoctorController@store')->name('doctors.store');
         Route::get('doctors/create', 'DoctorController@create')->name('doctors.create');
-        Route::delete('doctors/{doctor}', 'DoctorController@destroy')
-            ->name('doctors.destroy');
-        Route::patch('doctors/{doctor}', 'DoctorController@update')
-            ->name('doctors.update');
-        Route::get('doctors/{doctor}/edit', 'DoctorController@edit')
-            ->name('doctors.edit');
+        Route::delete('doctors/{doctor}', 'DoctorController@destroy')->name('doctors.destroy');
+        Route::patch('doctors/{doctor}', 'DoctorController@update')->name('doctors.update');
+        Route::get('doctors/{doctor}/edit', 'DoctorController@edit')->name('doctors.edit');
         Route::post('doctors/{doctor}/active-deactive', 'DoctorController@activeDeactiveStatus');
-        Route::post('doctors/{doctor}/finance', 'DoctorController@finance');
+        Route::get('doctors/{doctor}/finance', 'DoctorController@finance');
+        Route::post('doctors/{id}/finance', 'DoctorController@updateFinance');
         Route::get('export-doctors', 'DoctorController@doctorExport')->name('doctors.excel');
 
         // Listing route for the Enquiry Form details

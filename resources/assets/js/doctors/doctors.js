@@ -79,6 +79,7 @@ let tbl = $('#doctorsTable').DataTable({
                     {
                         'id': row.id,
                         'url': url + '/edit',
+                        'financeUrl' : doctorUrl+'/'+row.user_id+'/finance'
                     }];
                 return prepareTemplateRender('#doctorActionTemplate', data);
             }, name: 'id',

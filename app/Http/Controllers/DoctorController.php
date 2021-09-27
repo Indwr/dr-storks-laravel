@@ -10,6 +10,7 @@ use App\Models\BirthReport;
 use App\Models\DeathReport;
 use App\Models\Doctor;
 use App\Models\EmployeePayroll;
+use App\Models\Finance;
 use App\Models\InvestigationReport;
 use App\Models\IpdPatientDepartment;
 use App\Models\OperationReport;
@@ -20,6 +21,7 @@ use App\Models\Schedule;
 use App\Models\User;
 use App\Queries\DoctorDataTable;
 use App\Repositories\DoctorRepository;
+use Auth;
 use DataTables;
 use Exception;
 use Flash;
@@ -59,8 +61,8 @@ class DoctorController extends AppBaseController
                     return $doctor->user->image_url;
                 })->make(true);
         }
-        $data['statusArr'] = Doctor::STATUS_ARR;
-        return view('doctors.index', $data);
+        $statusArr = Doctor::STATUS_ARR;
+        return view('doctors.index', compact(['statusArr']));
     }
 
     /**
@@ -101,7 +103,6 @@ class DoctorController extends AppBaseController
     public function show($doctorId)
     {
         $data = $this->doctorRepository->getDoctorAssociatedData($doctorId);
-
         return view('doctors.show')->with($data);
     }
 
@@ -194,7 +195,21 @@ class DoctorController extends AppBaseController
         return Excel::download(new DoctorExport, 'doctors-'.time().'.xlsx');
     }
 
-    public function finance(){
+    public function finance(Request $request,$id){
+        $financeDetails = Finance::where('user_id',$id)->first();
         return view('doctors.finance', compact('financeDetails'));
+    }
+    public function updateFinance(Request $request,$id){
+        $user = User::find($id);
+        if (empty($user)) {
+            Flash::error('Doctor not found');
+            return redirect(route('doctors.index'));
+        }
+        $input = $request->all();
+        $this->doctorRepository->updateFinance($id, $input);
+        Flash::success('Doctor Finance updated successfully.');
+
+        return redirect(route('doctors.index'));
+
     }
 }

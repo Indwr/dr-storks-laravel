@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\Models\Address;
 use App\Models\Department;
 use App\Models\Doctor;
+use App\Models\Finance;
 use App\Models\User;
 use Arr;
 use Exception;
@@ -79,6 +80,9 @@ class DoctorRepository extends BaseRepository
 
             $user->update(['owner_id' => $ownerId, 'owner_type' => $ownerType]);
             $user->assignRole($input['department_id']);
+            $finance = new Finance;
+            $finance->user_id = $user->id;
+            $finance->save();
         } catch (Exception $e) {
             throw new UnprocessableEntityHttpException($e->getMessage());
         }
@@ -152,5 +156,15 @@ class DoctorRepository extends BaseRepository
         $data['appointments'] = $data['doctorData']->appointments;
 
         return $data;
+    }
+
+    public function updateFinance($id, $input){
+        try {
+            $finance = Finance::where('user_id',$id)->first();
+            $finance->update($input);
+            return true;
+        } catch (Exception $e) {
+            throw new UnprocessableEntityHttpException($e->getMessage());
+        }
     }
 }

@@ -163,6 +163,7 @@ return [
         'profile'         => 'Profile',
         'status'          => 'Status',
         'action'          => 'Action',
+        'finance'         => 'Update Finance',
         'save'            => 'Save',
         'cancel'          => 'Cancel',
         'back'            => 'Back',
@@ -444,11 +445,12 @@ return [
     ],
 
     'doctor'              => [
-        'new_doctor'     => 'New Doctor',
-        'edit_doctor'    => 'Edit Doctor',
-        'doctor_details' => 'Doctor Details',
-        'specialist'     => 'Specialist',
-        'name'           => 'Name',
+        'new_doctor'          => 'New Doctor',
+        'edit_doctor'         => 'Edit Doctor',
+        'edit_doctor_finance' => 'Edit Doctor Finance',
+        'doctor_details'      => 'Doctor Details',
+        'specialist'          => 'Specialist',
+        'name'                => 'Name',
     ],
 
     // bed assigns keys
