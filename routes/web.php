@@ -441,15 +441,14 @@ Route::group(['middleware' => ['auth', 'verified', 'xss', 'checkUserStatus']], f
         Route::resource('birth-reports', 'BirthReportController')->parameters(['birth-reports' => 'birthReport']);
         Route::get('birth-reports', 'BirthReportController@index')->name('birth-reports.index')->middleware('modules');
 
-        Route::resource('operation-reports',
-            'OperationReportController')->parameters(['operation-reports' => 'operationReport']);
-        Route::get('operation-reports',
-            'OperationReportController@index')->name('operation-reports.index')->middleware('modules');
+        Route::resource('operation-reports','OperationReportController')->parameters(['operation-reports' => 'operationReport']);
+        Route::get('operation-reports','OperationReportController@index')->name('operation-reports.index')->middleware('modules');
 
-        Route::resource('investigation-reports',
-            'InvestigationReportController')->parameters(['investigation-reports' => 'investigationReport']);
-        Route::get('investigation-reports',
-            'InvestigationReportController@index')->name('investigation-reports.index')->middleware('modules');
+        Route::resource('investigation-reports','InvestigationReportController')->parameters(['investigation-reports' => 'investigationReport']);
+        Route::get('investigation-reports','InvestigationReportController@index')->name('investigation-reports.index')->middleware('modules');
+
+        Route::get('doctor-finance-report','DoctorFinanceController@index')->name('doctor.finance.report')->middleware('modules');
+        Route::get('doctor-finance-report/{date}','DoctorFinanceController@filterByMonth')->name('doctor.finance.report.view')->middleware('modules');
 
         // Route for Prescription
         Route::resource('prescriptions', 'PrescriptionController');
@@ -940,20 +939,14 @@ Route::group(['middleware' => ['auth', 'verified', 'xss', 'checkUserStatus']], f
             Route::post('ipd-bills', 'IpdBillController@store')->name('ipd.bills.store');
 
             // OPD Patient routes
-            Route::get('opds',
-                'OpdPatientDepartmentController@index')->name('opd.patient.index')->middleware('modules');
+            Route::get('opds','OpdPatientDepartmentController@index')->name('opd.patient.index')->middleware('modules');
             Route::get('opds/create', 'OpdPatientDepartmentController@create')->name('opd.patient.create');
             Route::post('opds', 'OpdPatientDepartmentController@store')->name('opd.patient.store');
-            Route::get('opds/{opdPatientDepartment}',
-                'OpdPatientDepartmentController@show')->name('opd.patient.show');
-            Route::get('opds/{opdPatientDepartment}/edit',
-                'OpdPatientDepartmentController@edit')->name('opd.patient.edit');
-            Route::patch('opds/{opdPatientDepartment}',
-                'OpdPatientDepartmentController@update')->name('opd.patient.update');
-            Route::delete('opds/{opdPatientDepartment}',
-                'OpdPatientDepartmentController@destroy')->name('opd.patient.destroy');
-            Route::get('get-doctor-opd-charge',
-                'OpdPatientDepartmentController@getDoctorOPDCharge')->name('getDoctor.OPDcharge');
+            Route::get('opds/{opdPatientDepartment}','OpdPatientDepartmentController@show')->name('opd.patient.show');
+            Route::get('opds/{opdPatientDepartment}/edit','OpdPatientDepartmentController@edit')->name('opd.patient.edit');
+            Route::patch('opds/{opdPatientDepartment}','OpdPatientDepartmentController@update')->name('opd.patient.update');
+            Route::delete('opds/{opdPatientDepartment}','OpdPatientDepartmentController@destroy')->name('opd.patient.destroy');
+            Route::get('get-doctor-opd-charge','OpdPatientDepartmentController@getDoctorOPDCharge')->name('getDoctor.OPDcharge');
 
             // OPD Diagnosis routes
             Route::post('opd-diagnosis', 'OpdDiagnosisController@store')->name('opd.diagnosis.store');

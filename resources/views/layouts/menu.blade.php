@@ -503,6 +503,18 @@
         {{ __('messages.reports') }}
     </a>
     <ul class="nav-dropdown-items">
+
+        @module('Doctor Finance Report',$modules)
+        <li class="nav-item side-menus {{ Request::is('doctor-finance-report*') ? 'active' : '' }}">
+            <a class="nav-link menu-text-wrap" href="{{ route('doctor.finance.report') }}" data-toggle="tooltip"
+               data-placement="bottom" title="Doctor Finance Report"
+               data-delay='{"show":"500", "hide":"50"}'>
+                <i class="nav-icon fa fa-file-alt"></i>
+                <span>Doctor Finance Report</span>
+            </a>
+        </li>
+        @endmodule
+
         @module('Birth Reports',$modules)
         <li class="nav-item side-menus {{ Request::is('birth-reports*') ? 'active' : '' }}">
             <a class="nav-link menu-text-wrap" href="{{ route('birth-reports.index') }}" data-toggle="tooltip"

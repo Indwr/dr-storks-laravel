@@ -138,6 +138,8 @@ mix.js('resources/assets/js/custom/custom.js',
         'public/assets/js/doctors/create-edit.js').
     js('resources/assets/js/doctors/finance-edit.js',
     'public/assets/js/doctors/finance-edit.js').
+    js('resources/assets/js/reports/doctorFinanceReport.js',
+    'public/assets/js/reports/doctorFinanceReport.js').
     js('resources/assets/js/lab_technicians/lab_technicians.js',
         'public/assets/js/lab_technicians/lab_technicians.js').
     js('resources/assets/js/lab_technicians/lab_technicians_data_listing.js',

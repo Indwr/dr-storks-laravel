@@ -3,10 +3,13 @@
 namespace App\Repositories;
 
 use App\Models\Doctor;
+use App\Models\DoctorFinance;
+use App\Models\Finance;
 use App\Models\Notification;
 use App\Models\OpdPatientDepartment;
 use App\Models\Patient;
 use App\Models\PatientCase;
+use App\Models\User;
 use Exception;
 use Illuminate\Support\Collection;
 use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
@@ -116,6 +119,14 @@ class OpdPatientDepartmentRepository extends BaseRepository
         try {
             $input['is_old_patient'] = isset($input['is_old_patient']) ? true : false;
             OpdPatientDepartment::create($input);
+            $doctor = Doctor::find($input['doctor_id']);
+            $financePercent = Finance::where('user_id',$doctor->user_id)->first();
+            $finance = new DoctorFinance();
+            $finance->user_id = $doctor->user_id;
+            $finance->type    = 'opdCreated';
+            $finance->amount  = ($financePercent->consultation / 100) * $input['standard_charge'];
+            $finance->amount_in_percent = $financePercent->consultation;
+            $finance->save();
         } catch (Exception $e) {
             throw new UnprocessableEntityHttpException($e->getMessage());
         }
