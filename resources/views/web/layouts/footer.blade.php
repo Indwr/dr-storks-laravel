@@ -5,11 +5,11 @@
         <div class="col-lg-6 footer-followus">
             <span>{{ __('web.footer.follow_us') }}</span>
             <ul class="text-muted footer-links">
-                <li><a href="//twitter.com/infyom" target="_blank">{{ __('web.footer.twitter') }}</a></li>
-                <li><a href="//www.facebook.com/infyom" target="_blank">{{ __('web.footer.facebook') }}</a></li>
-                <li><a href="//in.linkedin.com/company/infyom-technologies"
+                <li><a href="#" target="_blank">{{ __('web.footer.twitter') }}</a></li>
+                <li><a href="#" target="_blank">{{ __('web.footer.facebook') }}</a></li>
+                <li><a href="#"
                        target="_blank">{{ __('web.footer.linkedin') }}</a></li>
-                <li><a href="//github.com/InfyOmLabs" target="_blank">{{ __('web.footer.github') }}</a></li>
+                <li><a href="#" target="_blank">{{ __('web.footer.github') }}</a></li>
             </ul>
         </div>
         <div class="col-lg-6">

@@ -5,7 +5,7 @@
     <a class="navbar-brand" href="{{ url('/') }}" data-toggle="tooltip" data-placement="right"
        title="{{ getAppName() }}">
         <img class="navbar-brand-full" src="{{getLogoUrl()}}" width="50px"
-             alt="">&nbsp;<span class="navbar-brand-full-name">{{ getAppName() }}</span>
+             alt="">&nbsp;<span class="navbar-brand-full-name">{{ config('app.name') }}</span>
         <img class="navbar-brand-minimized" src="{{getLogoUrl()}}" width="50px"
              alt="">
     </a>
@@ -71,7 +71,7 @@
                aria-haspopup="true" aria-expanded="false">
                 {{ (Auth::user()->full_name)??'' }}
                 <img class="img-avatar profile-header-img" id="loginUserImage" src="{{Auth::user()->image_url??'' }}"
-                     alt="InfyOm">
+                     alt="{{ config('app.name') }}">
             </a>
             <div class="dropdown-menu dropdown-menu-right ml-4">
                 <div class="dropdown-header text-center">

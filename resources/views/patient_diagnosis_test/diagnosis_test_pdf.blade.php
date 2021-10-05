@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <link rel="stylesheet" href="{{ asset('favicon.ico') }}">
+    <link rel="stylesheet" href="{{ asset('favicon.jpg') }}">
     <title>Patient Diagnosis Test Report</title>
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('css/diagnosis-test-pdf.css') }}" rel="stylesheet" type="text/css"/>

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/@fortawesome/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/simple-line-icons/css/simple-line-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/jquery.toast.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('favicon.ico') }}">
+    <link rel="stylesheet" href="{{ asset('favicon.jpg') }}">
     @yield('page_css')
     <link href="{{ mix('assets/css/style.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ mix('assets/css/infy-loader.css') }}" rel="stylesheet" type="text/css"/>

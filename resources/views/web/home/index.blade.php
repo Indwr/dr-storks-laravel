@@ -23,12 +23,10 @@
                         <div class="col-lg-6 header-text order-lg-1 col-12">
                             <p class="welcome-text mb-5 wow fadeInUp"
                                data-wow-duration="0.4s">{{ __('web.welcome_to') }} <br> <span
-                                        class="heading-name">{{ __('web.infyhms') }}</span> <span
+                                        class="heading-name">Dr Storks</span> <span
                                         class="heading-text">{{ __('web.manage_your_hospital_day_to_day_operations_digitally_with_ease_and_effortlessly') }}</span>
                             </p>
-                            <a href="https://codecanyon.net/item/infyhms-smart-hospital-management-system/26344507"
-                               class="header-contact-button wow bounceIn" data-wow-delay="0.4s"
-                               target="_blank">{{ __('web.buy_now') }}</a>
+
                         </div>
                     </div>
                 </div>
@@ -81,7 +79,7 @@
     </div>
     {{-- Departments container ends --}}
 
-    <div class="container-fluid" id="hmsFeatures">
+    <div class="container-fluid" style="display: none" id="hmsFeatures">
         <div class="container mt-5">
             <h4 class="m-0 p-0 text-center section-heading">{{ __('web.backend_features') }}</h4>
             <div class="row">

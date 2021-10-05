@@ -16,15 +16,12 @@
         </div>
     </div>
 @endif
-{{-- News container ends --}}
-
 <div class="container-fluid nav-bg">
     <div class="row">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand pl-3" href="{{ url('/') }}">
-                    <img src="{{ asset('web/img/logo.jpg') }}" class="d-inline-block align-top img-fluid logo-size"
-                         alt="hms-logo">
+                    <h3 style="color: #a45832">Dr Storks</h3>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent"
@@ -49,7 +46,7 @@
                             <a class="nav-link {{ Request::is('about-us') ? 'active' : '' }}"
                                href="{{ route('aboutUs') }}">{{ __('web.about_us') }}</a>
                         </li>
-                        <li class="nav-item simple-menu">
+                        {{-- <li class="nav-item simple-menu">
                             <div class="nav-link language-name">
                                 <span><i class="fas fa-language"></i> {{ getCurrentLanguageName() }}</span>
                                 <div class="language-contents">
@@ -61,7 +58,7 @@
                                     @endforeach
                                 </div>
                             </div>
-                        </li>
+                        </li> --}}
                         @auth
                             @role('Admin')
                             <li class="nav-item mt-1">

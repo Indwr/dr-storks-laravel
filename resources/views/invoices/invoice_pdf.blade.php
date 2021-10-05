@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <link rel="stylesheet" href="{{ asset('favicon.ico') }}">
+    <link rel="stylesheet" href="{{ asset('favicon.jpg') }}">
     <title>Invoice PDF</title>
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('css/invoice-pdf.css') }}" rel="stylesheet" type="text/css"/>
@@ -42,8 +42,8 @@
                             <tr>
                                 <td>
                                     <span class="font-weight-bold ">{{ __('messages.common.address') }}</span>:
-                                    @if(!empty($invoice->patient->address->address1) 
-                                    || !empty($invoice->patient->address->address2) 
+                                    @if(!empty($invoice->patient->address->address1)
+                                    || !empty($invoice->patient->address->address2)
                                     || !empty($invoice->patient->address->city)
                                     || !empty($invoice->patient->address->zip))
                                         @if(!empty($invoice->patient->address->address1))

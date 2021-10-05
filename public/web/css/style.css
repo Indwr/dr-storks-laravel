@@ -8,7 +8,7 @@
 
 ::-webkit-selection {
     color: #fff;
-    background: #ff3e55;
+    background: #a45832;
 }
 
 ::-moz-selection {
@@ -38,7 +38,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #ff3e55;
+    background: #a45832;
     border-radius: 5px;
 }
 
@@ -64,7 +64,7 @@
 }
 
 ::-ms-scrollbar-thumb {
-    background: #ff3e55;
+    background: #a45832;
     border-radius: 5px;
 }
 
@@ -95,8 +95,8 @@ body {
     right: 5px;
     display: none;
     font-size: 20px;
-    box-shadow: 0 0 13px #ff3e55;
-    background-color: #ff3e55;
+    box-shadow: 0 0 13px #a45832;
+    background-color: #a45832;
 }
 
 #hms-top:hover {
@@ -237,11 +237,11 @@ input, input:focus, select, select:focus {
 }
 
 .nav-link:hover {
-    color: #f33d54;
+    color: #a45832;
 }
 
 a.nav-link.active {
-    color: #f33d54;
+    color: #a45832;
 }
 
 
@@ -273,7 +273,7 @@ a.nav-link.active {
 .welcome-text .heading-name {
     font-size: 100px;
     line-height: 150px;
-    color: #f33d54;
+    color: #a45832;
 }
 
 .welcome-text .heading-text {
@@ -373,7 +373,7 @@ a.nav-link.active {
 }
 
 .start-using-block {
-    background: #ff4057;
+    background: #a45832;
     padding: 120px 0;
     margin: 50px 0;
     -webkit-clip-path: polygon(0 1%, 100% 10%, 100% 100%, 0 90%);
@@ -597,7 +597,7 @@ a.nav-link.active {
     background: #f9f9f9;
 }
 
-@media screen and (max-width: 768px) { 
+@media screen and (max-width: 768px) {
     #hmsFeatures {
         padding-bottom: 5px;
         padding-top: 5px;
@@ -607,7 +607,7 @@ a.nav-link.active {
         margin-bottom: 0.5rem !important;
         margin-top: 1.5rem !important;
     }
-    
+
     .hms__features__block {
         margin: 20px 0 !important;
     }
@@ -615,7 +615,7 @@ a.nav-link.active {
     #hmsFacilities.custom-mt-4 {
         margin-top: 1.5rem !important;
     }
-    
+
     .footer-block {
         margin-bottom: 5px;
     }
@@ -857,7 +857,7 @@ a.nav-link.active {
 
 /* -------- Features css starts -------- */
 .content-icons i {
-    background-color: #ff3e55;
+    background-color: #a45832;
     width: 100px;
     height: 100px;
     border-radius: 50px;
@@ -867,7 +867,7 @@ a.nav-link.active {
 }
 
 .contents-box:hover i {
-    box-shadow: 0 0 10px #ff3e55;
+    box-shadow: 0 0 10px #a45832;
 }
 
 /* -------- Features css ends -------- */
@@ -1108,13 +1108,13 @@ a.nav-link.active {
 }
 
 .send-enquiry-btn {
-    background-color: #f33d54;
-    border-color: #f33d54;
+    background-color: #a45832;
+    border-color: #a45832;
 }
 
 .send-enquiry-btn:hover {
-    background-color: #f33d54;
-    border-color: #f33d54;
+    background-color: #a45832;
+    border-color: #a45832;
 }
 
 .send-enquiry-btn:focus, .form-control:focus {
@@ -1122,13 +1122,13 @@ a.nav-link.active {
 }
 
 .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
-    background-color: #f33d54;
-    border-color: #f33d54;
+    background-color: #a45832;
+    border-color: #a45832;
     box-shadow: none;
 }
 
 .form-control:focus {
-    border-color: #f33d54;
+    border-color: #a45832;
 }
 
 .hide {
@@ -1288,7 +1288,7 @@ a.login {
     animation-name: bounceIn;
     animation-duration: 0.75s;
     transition: 0.3s all;
-    background: #ff3e55;
+    background: #a45832;
     color: #FFF;
     text-decoration: none;
     text-transform: uppercase;
@@ -1301,7 +1301,7 @@ a.login {
 a.login:hover {
     text-decoration: none;
     color: #FFF;
-    box-shadow: 0px 0px 15px #ff4057;
+    box-shadow: 0px 0px 15px #a45832;
 }
 
 /*---------login/register btn end-------------*/
@@ -1443,7 +1443,7 @@ a.login:hover {
 
 /* front side footer links css */
 .footer-links a:hover {
-    color: #f33d54 !important;
+    color: #a45832 !important;
 }
 
 textarea {
@@ -1451,15 +1451,15 @@ textarea {
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-    background: #ff3e55 !important;
+    background: #a45832 !important;
     color: white;
 }
 
 .bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover {
-    background: #ff3e55 !important;
+    background: #a45832 !important;
 }
 
 .send-enquiry-btn:active {
-    background-color: #ff3e55 !important;
-    border: 1px solid #ff3e55 !important;
+    background-color: #a45832 !important;
+    border: 1px solid #a45832 !important;
 }
