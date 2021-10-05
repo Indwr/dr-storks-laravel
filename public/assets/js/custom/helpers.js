@@ -1,0 +1,1 @@
+(()=>{"use strict";window.isEmpty=function(n){return null==n||""===n},window.randomCode=function(){var n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:6;return Math.random().toString(36).slice(-n)}})();

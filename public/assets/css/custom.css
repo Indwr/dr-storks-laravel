@@ -1,0 +1,100 @@
+@charset "UTF-8";
+.header .header-menu.top-bar-menu .menu > .menu-item.hover > .menu-link:not(.disabled):not(.active),
+.header .header-menu.top-bar-menu .menu > .menu-item > .menu-link:hover:not(.disabled):not(.active) {
+  background-color: rgba(245, 248, 250, 0.8);
+  color: #181824;
+}
+
+.top-bar-menu .topbar .show > .topbar-item i, .top-bar-menu .topbar .topbar-item:hover i, .top-bar-menu .topbar .topbar-item.show i {
+  color: #888C9F;
+}
+
+.notification-img {
+  background-image: url(/images/pattern-1.jpg?8aaadee60c455a2260b18d1ea34559d2);
+  background-position: top;
+  background-size: 100%;
+}
+
+.menu-text-wrap {
+  width: 265px;
+}
+.menu-text-wrap .menu-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+}
+
+.notifications-menu .topbar-item i {
+  font-size: 24px;
+}
+.notifications-menu .topbar-item:hover i {
+  color: #181824 !important;
+}
+.notifications-menu .topbar-item.show i {
+  color: #181824 !important;
+}
+.notifications-menu .notification-count {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  text-align: center;
+  padding: 5px;
+  line-height: 10px;
+  margin-top: -15px;
+  margin-left: -12px;
+  background: #db1430 !important;
+}
+.notifications-menu .profile-header-img {
+  width: 40px;
+  height: 40px;
+}
+.notifications-menu .show i {
+  color: #181824 !important;
+}
+
+.profile-menu a {
+  font-size: 16px;
+  color: #888C9F;
+}
+.profile-menu a:hover {
+  color: #1f1e2e;
+}
+.profile-menu a .profile-header-img {
+  width: 35px;
+  height: 35px;
+}
+
+#changePasswordModal .icons {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-family: "Font Awesome 5 Free";
+}
+#changePasswordModal .icon-ban {
+  font-weight: 900;
+}
+#changePasswordModal .icon-ban:before {
+  content: "";
+}
+#changePasswordModal .icon-eye {
+  font-weight: 400;
+}
+#changePasswordModal .icon-eye:before {
+  content: "";
+}
+#changePasswordModal .input-group-append {
+  margin-left: unset;
+}
+#changePasswordModal .changeType {
+  background-color: #d9e3ea;
+  border-color: #d9e3ea;
+  height: 42.5px;
+  vertical-align: middle;
+  line-height: 25px;
+  width: 42px;
+}

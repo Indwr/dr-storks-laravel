@@ -1,0 +1,1 @@
+$(document).ready((function(){"use strict";var e=$("#qty");e.blur((function(){e.val()<0&&e.val(0)})),$("#brandId,#categoryId").select2({width:"100%"}),$("#medicineNameId").focus(),$("#createMedicine, #editMedicine").on("submit",(function(){$("#saveBtn").attr("disabled",!0)}))}));

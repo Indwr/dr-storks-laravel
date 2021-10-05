@@ -1,0 +1,1 @@
+$(document).ready((function(){"use strict";getOpdTimelines(opdPatientDepartmentId)})),window.getOpdTimelines=function(e){$.ajax({url:opdTimelinesUrl,type:"get",data:{id:e},success:function(e){$("#opdTimelines").html(e)}})};

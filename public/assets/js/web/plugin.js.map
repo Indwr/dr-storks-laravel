@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./resources/assets/js/web/plugin.js"],"names":["$","lightGallery","mode","counter"],"mappings":"AAAAA,EAAE,iBAAiBC,aAAa,CAC5BC,KAAM,oBACNC,SAAS","file":"/assets/js/web/plugin.js","sourcesContent":["$('.lightgallery').lightGallery({\n    mode: 'lg-slide-circular',\n    counter: false\n});\n"],"sourceRoot":""}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./resources/assets/js/accounts/payments_list.js"],"names":["$","document","ready","DataTable"],"mappings":"AAAAA,EAAEC,UAAUC,OAAM,WACd,aAEAF,EAAE,oBAAoBG,UAAU","file":"/assets/js/accounts/payments_list.js","sourcesContent":["$(document).ready(function () {\n    'use strict';\n\n    $('#accountPayments').DataTable({});\n});\n"],"sourceRoot":""}

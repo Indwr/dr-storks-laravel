@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./resources/assets/js/bed_types/beds_view_list.js"],"names":["$","document","ready","DataTable"],"mappings":"AAAAA,EAAEC,UAAUC,OAAM,WACd,aAEAF,EAAE,SAASG,UAAU","file":"/assets/js/bed_types/beds_view_list.js","sourcesContent":["$(document).ready(function () {\n    'use strict';\n\n    $('#beds').DataTable({});\n});\n"],"sourceRoot":""}

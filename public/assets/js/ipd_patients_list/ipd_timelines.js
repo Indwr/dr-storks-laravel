@@ -1,0 +1,1 @@
+$(document).ready((function(){"use strict";getIpdTimelines(ipdPatientDepartmentId)})),window.getIpdTimelines=function(e){$.ajax({url:ipdTimelinesUrl,type:"get",data:{id:e},success:function(e){$("#ipdTimelines").html(e)}})};

@@ -1,0 +1,1 @@
+(()=>{"use strict";$("#OPDtab a").click((function(t){t.preventDefault(),$(this).tab("show")})),$("ul.nav-tabs > li > a").on("shown.bs.tab",(function(t){var a=$(t.target).attr("href").substr(1);window.location.hash=a}));var t=window.location.hash;$('#OPDtab a[href="'+t+'"]').tab("show")})();

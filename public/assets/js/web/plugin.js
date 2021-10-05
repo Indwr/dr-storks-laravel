@@ -1,0 +1,1 @@
+$(".lightgallery").lightGallery({mode:"lg-slide-circular",counter:!1});

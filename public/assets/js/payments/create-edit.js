@@ -1,0 +1,1 @@
+$(document).ready((function(){"use strict";$("#accountId").select2({width:"100%"}),$("#paymentDate").datetimepicker(DatetimepickerDefaults({format:"YYYY-MM-DD",useCurrent:!0,sideBySide:!0})),$("select").focus(),$(".price-input").trigger("input")}));
