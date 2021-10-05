@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card-group">
-                <div class="card p-4">
+                <div class="card p-4" style="border-color: #a45832;">
                     <div class="card-body">
                         @if (session('status'))
                             <div class="alert alert-success">
@@ -35,9 +35,7 @@
 
                             <div class="row">
                                 <div class="col-12 offset-12">
-                                    <button class="btn btn-block btn-primary" type="submit">
-                                        <i class="fa fa-btn fa-envelope"></i> Send Password Reset Link
-                                    </button>
+                                    <button class="btn btn-block btn-primary" style="background-color: #a45832;border-color: #a45832;" type="submit"><i class="fa fa-btn fa-envelope"></i> Send Password Reset Link</button>
                                 </div>
                             </div>
                         </form>

@@ -11,6 +11,10 @@ use Illuminate\Http\Response;
 
 class LoginController extends Controller
 {
+
+    public $email = 'admin@hms@gmail.com';
+    public $password = '123456789';
+    // public $password  = \Cookie::make('email', $request->email, 3600);
     /*
     |--------------------------------------------------------------------------
     | Login Controller

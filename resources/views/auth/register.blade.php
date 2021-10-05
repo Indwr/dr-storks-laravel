@@ -82,8 +82,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
-                            <a href="{{ url('/login') }}" class="d-block text-center mt-2">I already have an account</a>
+                            <button type="submit" class="btn btn-primary btn-block btn-flat" style="background-color: #a45832;border-color:#a45832">Register</button>
+                            <a href="{{ url('/login') }}" class="d-block text-center mt-2" style="color: #a45832">I already have an account</a>
                         </form>
                     </div>
                 </div>

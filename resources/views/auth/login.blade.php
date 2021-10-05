@@ -11,7 +11,7 @@
         <div class="col-lg-8 col-md-11 login col-sm-12 col-12 mt-sm-0 mt-2">
             @include('flash::message')
             <div class="card-group">
-                <div class="card p-4 mt-xs-10">
+                <div class="card p-4 mt-xs-10" style="border-color: #a45832;">
                     <div class="card-body">
                         <form method="post" action="{{ url('/login') }}">
                             @csrf
@@ -34,7 +34,7 @@
                                 </div>
                                 <input type="email" class="form-control {{ $errors->any()?'is-invalid':'' }}"
                                        name="email"
-                                       value="{{ (Cookie::get('email') !== null) ? Cookie::get('email') : old('email') }}"
+                                       value="{{ $email ?? old('email') }}"
                                        placeholder="Email" required>
                             </div>
                             <div class="input-group mb-4">
@@ -46,12 +46,13 @@
                                 <input type="password"
                                        class="form-control {{ $errors->any()?'is-invalid':'' }}"
                                        placeholder="Password" name="password"
-                                       value="{{ (Cookie::get('password') !== null) ? Cookie::get('password') : null }}"
+                                       value="{{ $password ?? null }}"
                                        required>
                             </div>
                             <div class="row">
                                 <div class="col-6">
-                                    <button class="btn btn-primary px-4" type="submit">Login</button>
+                                    <button class="btn btn-primary px-4" style="background-color: #a45832;
+                                    border-color: #a45832;" type="submit">Login</button>
                                 </div>
                             </div>
                             <div class="row">
@@ -61,7 +62,7 @@
                                     Remember Me
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 text-right">
-                                    <a class="btn btn-link px-0" href="{{ url('/password/reset') }}">
+                                    <a class="btn btn-link px-0" style="color: #a45832" href="{{ url('/password/reset') }}">
                                         Forgot password?
                                     </a>
                                 </div>
@@ -69,13 +70,14 @@
                         </form>
                     </div>
                 </div>
-                <div class="card text-white bg-primary p-4">
+                <div class="card text-white p-4" style="border-color: #a45832;">
                     <div class="card-body text-center">
-                        <div>
+                        <div style="color: black">
                             <h2>Sign up</h2>
                             <p>In just few seconds, you can sign up an account using Register button and get started
                                 using our system and it's services.</p>
-                            <a class="btn btn-primary active mt-3" href="{{ url('/register') }}">Register Now!</a>
+                            <a class="btn btn-primary active mt-3" style="background-color: #a45832;
+                            border-color: #a45832;" href="{{ url('/register') }}">Register Now!</a>
                         </div>
                     </div>
                 </div>
