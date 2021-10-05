@@ -34,7 +34,7 @@
                                 </div>
                                 <input type="email" class="form-control {{ $errors->any()?'is-invalid':'' }}"
                                        name="email"
-                                       value="{{ $email ?? old('email') }}"
+                                       value="{{  old('email') ?? 'admin@hms.com' }}"
                                        placeholder="Email" required>
                             </div>
                             <div class="input-group mb-4">
@@ -46,7 +46,7 @@
                                 <input type="password"
                                        class="form-control {{ $errors->any()?'is-invalid':'' }}"
                                        placeholder="Password" name="password"
-                                       value="{{ $password ?? null }}"
+                                       value="{{ '123456789' }}"
                                        required>
                             </div>
                             <div class="row">
